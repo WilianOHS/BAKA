@@ -54,6 +54,9 @@ class Controllogin extends CI_Controller {
 
 	}
 	function index(){
+		if($this->session->has_userdata('Id')){
+			header('location: '.base_url('controles'));
+		}
 		$this->load->view('headers/headers');
 		//Se carga la pagina del formulario
 		$this->load->view('Login');
