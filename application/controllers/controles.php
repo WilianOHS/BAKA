@@ -6,12 +6,17 @@ class Controles extends CI_Controller {
 		parent::__construct();//Ejecucion del constructor padre
 		$this->load->helper('form');//Carga del helper necesario
 		$this->load->model('modeloes');//Carga del modelo
+		$this->load->library('session');
 	}
 	function index(){
-		session_start();
-		if(isset($_SESSION['Id'])){
-			$mensaje = "Bienvenido ".$_SESSION['Nombre'];
+		//session_start();
+		
+		if($this->session->has_userdata('Id')){
+			$mensaje = "Bienvenido ".$this->session->userdata('Id');
+			//echo("lol");
 		}else{
+			//echo("NO");
+			//echo($this->session->Id);
 			header('Location: '.base_url("controllogin/salir"));  
 		}
 

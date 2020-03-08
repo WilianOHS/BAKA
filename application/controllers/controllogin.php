@@ -19,16 +19,18 @@ class Controllogin extends CI_Controller {
 		foreach($q->result() as $row){
 			if($us==$row->Nombre && $pas==$row->Pass){
 				$dato =array(
-					'Id'=>$row->id,
+					'Id'=>$row->Id,
 					'Nombre'=>$us,
 					'Pass'=>$pas,
-					'Tipo'=>$row->id
+					'Tipo'=>$row->Tipo
 
 				);
+				//session_start();
 				$this->session->set_userdata($dato);
+				//echo($this->session->userdata('Nombre'));
 				//cuandoel usuario y contraseña sean validos
 				//se guardaran en session sus datos 
-				header('location: http://localhost/BAKA/controles');
+				header('location: '.base_url('controles'));
 				//en el controlador de la pagina principal antes de mostrar la view hay que agregar siempre al inicio un comprobante que dira $ this -> session -> has_userdata ( 'id' ); y hacer un if que si eso es falso que no haga lo de load view que solo haga load view cuando eso salga verdadero
 
 				//luego de guardar en sesion manda a la pagina principal en este caos su controlador
@@ -37,13 +39,14 @@ class Controllogin extends CI_Controller {
 				//sinoq ue vuelva al index del login
 			}
 		}
+		header('location: '.base_url('/controllogin'));
 
 
 	}
 	function salir(){
 		//este sera el boton cerrar sesion
 		$dato =array('Id','Nombre','Pass','Tipo');
-
+		//session_start();
 		$this->session->unset_userdata($dato);//elimina los datos de la sesion porque el suuario saldra y quedara a espera de guardar datos de otro suarioq ue se valide correctamente 
 		$this->session->sess_destroy();
 		header('location: '.base_url('/controllogin'));
