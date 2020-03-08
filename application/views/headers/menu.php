@@ -133,13 +133,13 @@
                     <ul class="nav navbar-nav mr-auto">
                         
                         <li class="dropdown"><a style="color:white" class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Estudiantes </a>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controles/nuevo")); ?>">Ingresar</a><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controltemas/nuevo")); ?>">Mostrar</a></div>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controles/nuevo")); ?>">Ingresar</a><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controles/")); ?>">Mostrar</a></div>
                         </li>
                         <li class="dropdown"><a style="color:white" class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuarios </a>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controlu/nuevo")); ?>">Ingresar</a><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controltemas/nuevo")); ?>">Mostrar</a></div>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controlu/nuevo")); ?>">Ingresar</a><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controlu/")); ?>">Mostrar</a></div>
                         </li>
                         <li class="dropdown"><a style="color:white" class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Temas </a>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controltemas/nuevo")); ?>">Ingresar</a><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controltemas/nuevo")); ?>">Mostrar</a></div>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controltemas/nuevo")); ?>">Ingresar</a><a class="dropdown-item" role="presentation" href="<?php echo(base_url("controltemas/")); ?>">Mostrar</a></div>
                         </li>
                         
                     </ul><span class="navbar-text actions"> <a href="#" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="<?php echo(base_url("controllogin/salir")); ?>">SALIR</a></span></div>
