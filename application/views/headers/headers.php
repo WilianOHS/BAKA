@@ -4,8 +4,8 @@
 	<title>Sistema Control</title>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 	<link href="../../assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
-  	<link href="../../assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+ 	<link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  	<link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 <style type="text/css">
 	input[name=label], input[name=email], input[type=password]
 {
@@ -36,7 +36,7 @@ box-shadow: 0 1px 0 white;
 }
 
 body {
-background-image: url("../../assets/dark-geometric.png");
+background-image: url("assets/dark-geometric.png");
  background-color: red;
 }
 
