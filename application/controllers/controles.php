@@ -8,15 +8,22 @@ class Controles extends CI_Controller {
 		$this->load->model('modeloes');//Carga del modelo
 	}
 	function index(){
+		session_start();
+		if(isset($_SESSION['Id'])){
+			$mensaje = "Bienvenido ".$_SESSION['Nombre'];
+		}else{
+			header('Location: '.base_url("controllogin/salir"));  
+		}
+
 		$this->load->view('headers/menu');
 		$data['segmento'] = $this->uri->segment(3);
 		$this->load->view('headers/headers');
 		if (!$data['segmento']) {
-			$data['estudiantes'] = $this->modeloes->obtenerCursos();
+			//$data['estudiantes'] = $this->modeloes->obtenerCursos();
 		
 		} else {
-			$data['estudiantes'] = $this->modeloes->obtenerCurso($data['segmento']);
-		
+			//$data['estudiantes'] = $this->modeloes->obtenerCurso($data['segmento']);
+		 
 		}
 		
 		$this->load->view('vistas/curso',$data);
@@ -40,7 +47,7 @@ class Controles extends CI_Controller {
 		}else{
 			echo("REGISTRADOS CON EXITO");
 		}
-		header('location: http://localhost/CodeIgniter/index.php/controles');
+		header('location: http://localhost/CodeIgniter/controles');
 	}
 	function actualizar(){
 

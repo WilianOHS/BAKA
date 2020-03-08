@@ -10,22 +10,22 @@
   </thead>
 <tbody>
 <?php 
-	if($estudiantes){
-	foreach ($estudiantes->result() as $rows) {?>
+	/*if($estudiantes){
+	foreach ($estudiantes->result() as $rows) {*/?>
   <tr class="item_row">
-        <td><?php echo $rows->idEstudiante;  ?></td>
-        <td> <?php echo $rows->Nombres;  ?></td>
-        <td> <?php echo $rows->Apellidos; ?></td>
-        <td> <?php echo $rows->Carnet; ?></td>
+        <td><?php// echo $rows->idEstudiante;  ?></td>
+        <td> <?php //echo $rows->Nombres;  ?></td>
+        <td> <?php// echo $rows->Apellidos; ?></td>
+        <td> <?php// echo $rows->Carnet; ?></td>
        
   </tr>
-  <?php } ?>
+  <?php// } ?>
 </tbody>
 </table>
 <?php   
-	} else {
+/*} else {
 		echo "<p>Error en la aplicacion</p>";
-	}
+	}*/
 ?>
 </div>
 </body>

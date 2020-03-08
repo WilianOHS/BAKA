@@ -14,7 +14,7 @@
 			else return false;
 		}
 		function obtenerUsuario($id){
-			$this->db->where('idUsuario',$id);
+			$this->db->where('Id',$id); 
 			$query = $this->db->get('usuarios');
 			if ($query->num_rows() > 0) return $query;
 			else return false;
