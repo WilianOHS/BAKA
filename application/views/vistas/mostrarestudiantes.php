@@ -3,9 +3,10 @@
   <thead align="left" style="display: table-header-group">
   <tr>
      <th>idEstudiante </th>
+     <th>Carnet</th>
      <th>Nombres</th>
      <th>Apellidos </th>
-     <th>Carnet</th>
+     
   </tr>
   </thead>
 <tbody>

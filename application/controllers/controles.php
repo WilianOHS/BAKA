@@ -24,30 +24,31 @@ class Controles extends CI_Controller {
 		$data['segmento'] = $this->uri->segment(3);
 		$this->load->view('headers/headers');
 		if (!$data['segmento']) {
-			//$data['estudiantes'] = $this->modeloes->obtenerCursos();
+			//$data['estudiantes'] = $this->modeloes->obtenerEstudiantes();
 		
 		} else {
-			//$data['estudiantes'] = $this->modeloes->obtenerCurso($data['segmento']);
+			//$data['estudiantes'] = $this->modeloes->obtenerEstudiante($data['segmento']);
 		 
 		}
 		
-		$this->load->view('vistas/curso',$data);
+		$this->load->view('vistas/mostrarestudiantes',$data);
 	}
 	function nuevo(){
 		//$this->load->view('headers/headers');
 		$this->load->view('headers/menu');
-		$this->load->view('vistas/formulario');
+		$this->load->view('vistas/vistaestudiantes');
 	}
 	function recibirDatos(){
 		//Arreglo para mandar la inf necesaria hacia el modelo
 		$data = array(
 			//Enviamos los campos introducidos por el usuario
+			'Carnet' => $this->input->post('carnet'),
 			'Nombres' => $this->input->post('nombre'),
 			'Apellidos' => $this->input->post('apellido'),
-			'Carnet' => $this->input->post('carnet')
+			
 		);
 		//if y else si se introducen los datos a la base
-		if(!$this->modeloes->crearCurso($data)){
+		if(!$this->modeloes->crearEstudiante($data)){
 			echo("ERROR AL INSERTAR DATOS");
 		}else{
 			echo("REGISTRADOS CON EXITO");

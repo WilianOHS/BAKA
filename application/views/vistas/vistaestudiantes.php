@@ -12,6 +12,11 @@
 ?>
 
 <?php
+	//Arreglo para las caracteristicas de carnet
+	$carnet = array(
+	'name' => 'carnet',
+	'placeholder' => 'Escribe el carnet'
+	);
 	//Arreglo para las caracteristicas de nombre
 	$nombre = array(
 		'name' => 'nombre',
@@ -22,13 +27,29 @@
 		'name' => 'apellido',
 		'placeholder' => 'Escribe los apellidos'
 	);
-	//Arreglo para las caracteristicas de carnet
-	$carnet = array(
-		'name' => 'carnet',
-		'placeholder' => 'Escribe el carnet'
+	//Arreglo para las caracteristicas de carrera
+	$carrera = array(
+		'name' => 'carrera',
+		'placeholder' => 'Escribe la carrera'
+	);
+	//Arreglo para las caracteristicas de grupo
+	$grupo = array(
+		'name' => 'grupo',
+		'placeholder' => 'Escribe el grupo'
 	);
 ?>
-
+<?php
+	//label de carnet
+	echo form_label('Carnet: ','carnet');
+?>
+<?php
+	//input de carnet
+	echo form_input($carnet);
+?>
+<?php
+	//
+	echo "<br><br>";
+?>
 <?php
 	//Label de nombre
 	echo form_label('Nombre: ','nombre');//
@@ -54,12 +75,24 @@
 	echo "<br><br>";
 ?>
 <?php
-	//label de carnet
-	echo form_label('Carnet: ','carnet');
+	//Label de carrera
+	echo form_label('Carrera: ','carrera');
 ?>
 <?php
-	//Label de carnet
-	echo form_input($carnet);
+	//input de carrera
+	echo form_input($carrera);
+?>
+<?php
+	//
+	echo "<br><br>";
+?>
+<?php
+	//Label de grupo
+	echo form_label('Grupo: ','grupo');
+?>
+<?php
+	//input de apellido
+	echo form_input($grupo);
 ?>
 <?php
 	//

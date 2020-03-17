@@ -5,15 +5,15 @@
 			parent::__construct();
 			$this->load->database();
 		}
-		function crearCurso($data){
+		function crearEstudiante($data){
 			return ($this->db->insert('estudiantes',$data));
 		}
-		function obtenerCursos(){
+		function obtenerEstudiantes(){
 			$query = $this->db->get('estudiantes');
 			if ($query->num_rows() > 0) return $query;
 			else return false;
 		}
-		function obtenerCurso($id){
+		function obtenerEstudiante($id){
 			$this->db->where('idEstudiante',$id);
 			$query = $this->db->get('estudiantes');
 			if ($query->num_rows() > 0) return $query;
