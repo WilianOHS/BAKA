@@ -24,7 +24,7 @@ class Controles extends CI_Controller {
 		$data['segmento'] = $this->uri->segment(3);
 		$this->load->view('headers/headers');
 		if (!$data['segmento']) {
-			//$data['estudiantes'] = $this->modeloes->obtenerEstudiantes();
+			$data['estudiante'] = $this->modeloes->obtenerEstudiantes();
 		
 		} else {
 			//$data['estudiantes'] = $this->modeloes->obtenerEstudiante($data['segmento']);
@@ -45,6 +45,8 @@ class Controles extends CI_Controller {
 			'Carnet' => $this->input->post('carnet'),
 			'Nombres' => $this->input->post('nombre'),
 			'Apellidos' => $this->input->post('apellido'),
+			'Carrera' => $this->input->post('carrera'),
+			'Grupo' => $this->input->post('grupo')
 			
 		);
 		//if y else si se introducen los datos a la base

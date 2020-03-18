@@ -6,16 +6,16 @@
 			$this->load->database();
 		}
 		function crearEstudiante($data){
-			return ($this->db->insert('estudiantes',$data));
+			return ($this->db->insert('estudiante',$data));
 		}
 		function obtenerEstudiantes(){
-			$query = $this->db->get('estudiantes');
+			$query = $this->db->get('estudiante');
 			if ($query->num_rows() > 0) return $query;
 			else return false;
 		}
 		function obtenerEstudiante($id){
-			$this->db->where('idEstudiante',$id);
-			$query = $this->db->get('estudiantes');
+			$this->db->where('Carnet',$id);
+			$query = $this->db->get('estudiante');
 			if ($query->num_rows() > 0) return $query;
 			else return false;
 		}
@@ -23,7 +23,7 @@
 			array(
 				'x'=>'lol'
 			);
-			return ($this->db->update('estudiantes',$data, array('id'=>$id)));
+			return ($this->db->update('estudiante',$data, array('id'=>$id)));
 		}
 
 	}
